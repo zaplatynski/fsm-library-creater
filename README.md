@@ -1,4 +1,4 @@
-# FSM Library Creater
+# FSM Library Creater [![Build Status](https://travis-ci.org/zaplatynski/fsm-library-creater.svg?branch=master)](https://travis-ci.org/zaplatynski/fsm-library-creater)
 
 The FSM Library Creator is a small but useful apllication of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers to the FirstSpirit CMS. 
 
