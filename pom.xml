@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.marza.firstspirit.modules</groupId>
+    <artifactId>fsmlibrarycreater</artifactId>
+    <version>1.0</version>
+    <packaging>fsm</packaging>
+
+    <name>FSM Library Creater</name>
+    <description>This pom can be used to create library FSMs for the FirstSpirit CMS</description>
+    <inceptionYear>2016</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>mza</id>
+            <name>Marian Zaplatynski</name>
+            <email>marza@marza.de</email>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/zaplatynski/fsm-library-creater/issues</url>
+    </issueManagement>
+
+    <scm>
+        <url>https://github.com/zaplatynski/fsm-library-creater</url>
+        <connection>scm:git:https://github.com/zaplatynski/fsm-library-creater.git</connection>
+        <developerConnection>scm:git:https://github.com/zaplatynski/fsm-library-creater.git
+        </developerConnection>
+    </scm>
+
+    <build>
+        <defaultGoal>package</defaultGoal>
+        <finalName>${lib.artifactId}-${lib.version}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.github.zaplatynski</groupId>
+                <artifactId>fsm-packagetype</artifactId>
+                <version>1.0</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <attach>false</attach>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>src/assembly/fsm.xml</descriptor>
+                    </descriptors>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${lib.groupId}</groupId>
+            <artifactId>${lib.artifactId}</artifactId>
+            <version>${lib.version}</version>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>postgres</id>
+            <activation>
+                <property>
+                    <name>!lib.groupId</name>
+                </property>
+            </activation>
+            <properties>
+                <lib.groupId>org.postgresql</lib.groupId>
+                <lib.artifactId>postgresql</lib.artifactId>
+                <lib.version>9.4.1209</lib.version>
+                <lib.displayName>PostgreSQL JDBC Driver</lib.displayName>
+                <lib.description>PostgreSQL JDBC Driver JDBC 4.1</lib.description>
+                <lib.vendor>PostgreSQL</lib.vendor>
+            </properties>
+        </profile>
+        <profile>
+            <id>mysql</id>
+            <properties>
+                <lib.groupId>mysql</lib.groupId>
+                <lib.artifactId>mysql-connector-java</lib.artifactId>
+                <lib.version>6.0.3</lib.version>
+                <lib.displayName>MySQL JDBC Driver</lib.displayName>
+                <lib.description>MySQL JDBC Type 4 driver</lib.description>
+                <lib.vendor>MySQL</lib.vendor>
+            </properties>
+        </profile>
+        <profile>
+            <id>hsqldb</id>
+            <properties>
+                <lib.groupId>org.hsqldb</lib.groupId>
+                <lib.artifactId>hsqldb</lib.artifactId>
+                <lib.version>2.3.4</lib.version>
+                <lib.displayName>HyperSQL Database JDBC Driver</lib.displayName>
+                <lib.description>HSQLDB - Lightweight 100% Java SQL Database Engine
+                </lib.description>
+                <lib.vendor>The HSQL Development Group</lib.vendor>
+            </properties>
+        </profile>
+        <profile>
+            <id>sqlite</id>
+            <properties>
+                <lib.groupId>org.xerial</lib.groupId>
+                <lib.artifactId>sqlite-jdbc</lib.artifactId>
+                <lib.version>3.8.11.2</lib.version>
+                <lib.displayName>SQLite JDBC Driver</lib.displayName>
+                <lib.description>SQLite JDBC library</lib.description>
+                <lib.vendor>Xerial Project</lib.vendor>
+            </properties>
+        </profile>
+       <profile>
+            <!-- See URL below for more information regarding signing up at Oracle -->
+            <!-- https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc -->
+            <id>oracle</id>
+            <properties>
+                <lib.groupId>com.oracle.jdbc</lib.groupId>
+                <lib.artifactId>ojdbc7</lib.artifactId>
+                <lib.version>12.1.0.2</lib.version>
+                <lib.displayName>OracleDB JDBC Driver</lib.displayName>
+                <lib.description>OracleDB JDBC Type 4 driver</lib.description>
+                <lib.vendor>MySQL</lib.vendor>
+            </properties>
+            <repositories>
+                <repository>
+                    <id>maven.oracle.com</id>
+                    <name>oracle-maven-repo</name>
+                    <url>https://maven.oracle.com</url>
+                    <layout>default</layout>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+</project>

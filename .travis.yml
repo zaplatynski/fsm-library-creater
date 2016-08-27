@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk8
+cache:
+  directories:
+    - ~/.m2
+env:
+    - LIB=postgres
+    - LIB=mysql
+    - LIB=hsqldb
+    - LIB=sqlite
+script: mvn clean install -P $LIB
+install:
+    -
