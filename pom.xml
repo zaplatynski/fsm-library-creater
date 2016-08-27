@@ -124,6 +124,17 @@
                 <lib.vendor>Xerial Project</lib.vendor>
             </properties>
         </profile>
+        <profile>
+            <id>derbydb</id>
+            <properties>
+                <lib.groupId>org.apache.derby</lib.groupId>
+                <lib.artifactId>derby</lib.artifactId>
+                <lib.version>10.12.1.1</lib.version>
+                <lib.displayName>Derby JDBC Driver</lib.displayName>
+                <lib.description>Apache Derby Database Engine and Embedded JDBC Driver</lib.description>
+                <lib.vendor>Apache Software Foundation</lib.vendor>
+            </properties>
+        </profile>
        <profile>
             <!-- See URL below for more information regarding signing up at Oracle -->
             <!-- https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc -->
