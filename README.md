@@ -7,6 +7,7 @@ There are predefined working Maven profiles for
 - MySQL
 - HyperSQL
 - SQLite
+- DerbyDB
 
 OracleDB and Microsoft SQL server are special cases. For OracleDB please read their [blog about how to get a JDBC driver](https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc).
 
