@@ -9,6 +9,7 @@ env:
     - LIB=mysql
     - LIB=hsqldb
     - LIB=sqlite
+    - LIB=derbydb
 script: mvn clean install -P $LIB
 install:
     -
