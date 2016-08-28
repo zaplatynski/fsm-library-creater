@@ -88,6 +88,7 @@
                 <lib.displayName>PostgreSQL JDBC Driver</lib.displayName>
                 <lib.description>PostgreSQL JDBC Driver JDBC 4.1</lib.description>
                 <lib.vendor>PostgreSQL</lib.vendor>
+                <lib.module>module_all.xml</lib.module>
             </properties>
         </profile>
         <profile>
@@ -99,6 +100,7 @@
                 <lib.displayName>MySQL JDBC Driver</lib.displayName>
                 <lib.description>MySQL JDBC Type 4 driver</lib.description>
                 <lib.vendor>MySQL</lib.vendor>
+                <lib.module>module_all.xml</lib.module>
             </properties>
         </profile>
         <profile>
@@ -111,6 +113,7 @@
                 <lib.description>HSQLDB - Lightweight 100% Java SQL Database Engine
                 </lib.description>
                 <lib.vendor>The HSQL Development Group</lib.vendor>
+                <lib.module>module_all.xml</lib.module>
             </properties>
         </profile>
         <profile>
@@ -122,6 +125,7 @@
                 <lib.displayName>SQLite JDBC Driver</lib.displayName>
                 <lib.description>SQLite JDBC library</lib.description>
                 <lib.vendor>Xerial Project</lib.vendor>
+                <lib.module>module_all.xml</lib.module>
             </properties>
         </profile>
         <profile>
@@ -133,6 +137,7 @@
                 <lib.displayName>Derby JDBC Driver</lib.displayName>
                 <lib.description>Apache Derby Database Engine and Embedded JDBC Driver</lib.description>
                 <lib.vendor>Apache Software Foundation</lib.vendor>
+                <lib.module>module_all.xml</lib.module>
             </properties>
         </profile>
        <profile>
@@ -145,7 +150,8 @@
                 <lib.version>12.1.0.2</lib.version>
                 <lib.displayName>OracleDB JDBC Driver</lib.displayName>
                 <lib.description>OracleDB JDBC Type 4 driver</lib.description>
-                <lib.vendor>MySQL</lib.vendor>
+                <lib.vendor>Oracle</lib.vendor>
+                <lib.module>module_all.xml</lib.module>
             </properties>
             <repositories>
                 <repository>
@@ -159,6 +165,18 @@
                     </releases>
                 </repository>
             </repositories>
+        </profile>
+        <profile>
+            <id>jstl</id>
+            <properties>
+                <lib.groupId>javax.servlet</lib.groupId>
+                <lib.artifactId>jstl</lib.artifactId>
+                <lib.version>1.2</lib.version>
+                <lib.displayName>JSTL</lib.displayName>
+                <lib.description>JSP Standard Tag Library</lib.description>
+                <lib.vendor>Oracle</lib.vendor>
+                <lib.module>module_web.xml</lib.module>
+            </properties>
         </profile>
     </profiles>
 

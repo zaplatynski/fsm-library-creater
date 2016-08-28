@@ -1,17 +1,37 @@
 # FSM Library Creater [![Build Status](https://travis-ci.org/zaplatynski/fsm-library-creater.svg?branch=master)](https://travis-ci.org/zaplatynski/fsm-library-creater)
 
-The FSM Library Creator is a small but useful apllication of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers to the FirstSpirit CMS.
+The FSM Library Creator is a small but useful apllication of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers or web liberies like JSTL to the FirstSpirit CMS.
 
 There are predefined working Maven profiles for
-- PostgreSQL
-- MySQL
-- HyperSQL
-- SQLite
-- DerbyDB
+- PostgreSQL JDBC driver,
+- MySQL JDBC driver,
+- HyperSQL JDBC driver,
+- SQLite JDBC driver,
+- DerbyDB JDBC driver and for the
+- JSTL (for Apache Tomcat).
 
 OracleDB and Microsoft SQL server are special cases. For OracleDB please read their [blog about how to get a JDBC driver](https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc).
 
-But this is not limited to JDBC drivers. Any library which should be public avaialable for FirstSpirit CMS can add anew profile. Please send me a pull request if you think others might benefit too.
+But this is not limited to the examples above. Any library which should be public avaialable for FirstSpirit CMS can add a new profile.
+```
+<profile>
+    <id>name</id>
+    <properties>
+        <lib.groupId>maven.groupId</lib.groupId>
+        <lib.artifactId>maven.artifactId</lib.artifactId>
+        <lib.version>maven.version</lib.version>
+        <lib.displayName>Short name</lib.displayName>
+        <lib.description>Long name</lib.description>
+        <lib.vendor>vendor name</lib.vendor>
+        <lib.module>MODULE_XML</lib.module>
+    </properties>
+</profile>
+```
+For `MODULE_XML` you can choose bewteen two predefined `module.xml` files:
+- `module_all.xml` specifies the library both for web and server wiede usage and
+- `module_web.xml` only specifies the library for web usage.
+
+Please send me a pull request if you think others might benefit too so.
 
 ## Bugs and feature requests
 
@@ -23,7 +43,7 @@ Please file any **bug** or **feature request** here at [github.com/zaplatynski/f
 ```
 mvn clean package -p postgres
 ```
-The example above will create the FSM for the PostgreSQL JDBC Driver.
+The example above will create the FSM for the PostgreSQL JDBC Driver. Please specify only one Maven profile at a time since every profile contains the information need to assemble the requested FSM.
 
 ##  Disclaimer
 

@@ -8,7 +8,8 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <files>
         <file>
-            <source>src/main/resources/module.xml</source>
+            <source>src/main/resources/${lib.module}</source>
+            <destName>module.xml</destName>
             <outputDirectory>META-INF</outputDirectory>
             <filtered>true</filtered>
         </file>
