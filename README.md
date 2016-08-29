@@ -44,6 +44,11 @@ Please file any **bug** or **feature request** here at [github.com/zaplatynski/f
 mvn clean package -p postgres
 ```
 The example above will create the FSM for the PostgreSQL JDBC Driver. Please specify only one Maven profile at a time since every profile contains the information need to assemble the requested FSM.
+You can bypass the version. So for instance to get the Postgres diver not in version 9.4.1209 (the predefined version) but in version 9.2-1002-jdbc4:
+```
+mvn clean package -p postgres -Dlib.version=9.2-1002-jdbc4
+```
+The version string must match the versions available in Maven central.
 
 ##  Disclaimer
 
