@@ -1,6 +1,6 @@
-# FSM Library Creater [![Build Status](https://travis-ci.org/zaplatynski/fsm-library-creater.svg?branch=master)](https://travis-ci.org/zaplatynski/fsm-library-creater)
+# FSM Library Creator [![Build Status](https://travis-ci.org/zaplatynski/fsm-library-creator.svg?branch=master)](https://travis-ci.org/zaplatynski/fsm-library-creator)
 
-The FSM Library Creator is a small but useful apllication of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers or web liberies like JSTL to the FirstSpirit CMS.
+The FSM Library Creator is a small but useful application of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers or web liberies like JSTL to the FirstSpirit CMS. See the [FirstSpirit Module Developer Manual](http://www.e-spirit.com/odfs52/dokumentation/fuer-entwickler/MDEV_EN_FirstSpirit_ModuleDeveloper.pdf), section 3.15 and 3.16 for detailed information.
 
 There are predefined working Maven profiles for
 - PostgreSQL JDBC driver,
@@ -10,7 +10,7 @@ There are predefined working Maven profiles for
 - DerbyDB JDBC driver and for the
 - JSTL (for Apache Tomcat).
 
-OracleDB and Microsoft SQL server are special cases. For OracleDB please read their [blog about how to get a JDBC driver](https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc).
+*Microsoft SQL* server and *Oracle DB* are special cases. For Oracle DB please read their [blog about how to get a JDBC driver](https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc).
 
 But this is not limited to the examples above. Any library which should be public avaialable for FirstSpirit CMS can add a new profile.
 ```
@@ -35,7 +35,7 @@ Please send me a pull request if you think others might benefit too so.
 
 ## Bugs and feature requests
 
-Please file any **bug** or **feature request** here at [github.com/zaplatynski/fsm-library-creater/issues](https://github.com/zaplatynski/fsm-library-creater/issues). Thanks!
+Please file any **bug** or **feature request** here at [github.com/zaplatynski/fsm-library-creator/issues](https://github.com/zaplatynski/fsm-library-creator/issues). Thanks!
  
 ## Build
 

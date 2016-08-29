@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by https://github.com/zaplatynski/fsm-library-creator -->
 <module>
     <name>${lib.artifactId}</name>
     <displayname>${lib.displayName}</displayname>
     <version>${lib.version}</version>
-    <description>${lib.description} - created by https://github
-        .com/zaplatynski/fsm-library-creater</description>
+    <description>${lib.description}</description>
     <vendor>${lib.vendor}</vendor>
     <components>
         <web-app scopes="global,project">
@@ -19,8 +19,7 @@
             <name>${lib.artifactId}-library</name>
             <displayname>${lib.displayName}</displayname>
             <version>${lib.version}</version>
-            <description>${lib.description} - created by
-                https://github.com/zaplatynski/fsm-library-creater</description>
+            <description>${lib.description}</description>
             <resources>
                 <resource name="${lib.artifactId}" version="${lib.version}">lib/${lib.artifactId}-${lib.version}.jar</resource>
             </resources>
