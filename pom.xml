@@ -169,12 +169,12 @@
         <profile>
             <id>jstl</id>
             <properties>
-                <lib.groupId>javax.servlet</lib.groupId>
+                <lib.groupId>jstl</lib.groupId>
                 <lib.artifactId>jstl</lib.artifactId>
                 <lib.version>1.2</lib.version>
                 <lib.displayName>JSTL</lib.displayName>
                 <lib.description>JSP Standard Tag Library</lib.description>
-                <lib.vendor>Oracle</lib.vendor>
+                <lib.vendor>Apache Software Foundation</lib.vendor>
                 <lib.module>module_web.xml</lib.module>
             </properties>
         </profile>
