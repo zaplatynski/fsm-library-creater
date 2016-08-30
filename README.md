@@ -2,7 +2,7 @@
 
 The FistSpirit Module Library Creator is a small but useful application of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers or web liberies like JSTL to the FirstSpirit CMS. See the [FirstSpirit Module Developer Manual (German only)](http://www.e-spirit.com/odfs52/dokumentation/fuer-entwickler/MDEV_DE_FirstSpirit_ModuleDeveloper.pdf), section 3.15 and 3.16 for detailed information.
 
-There are predefined working Maven profiles for
+There are predefined working [Maven profiles](pom.xml) for
 - PostgreSQL JDBC driver,
 - MySQL JDBC driver,
 - HyperSQL JDBC driver,
@@ -12,7 +12,7 @@ There are predefined working Maven profiles for
 
 *Microsoft SQL* server and *Oracle DB* are special cases. For Oracle DB please read their [blog about how to get a JDBC driver](https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc).
 
-But this is not limited to the examples above. Any library which should be public avaialable for FirstSpirit CMS can add a new profile.
+But this is not limited to the examples above. Any library which should be public avaialable for FirstSpirit CMS can add a new profile in the pom's profile section like this:
 ```
 <profile>
     <id>name</id>
@@ -31,7 +31,7 @@ For `MODULE_XML` you can choose bewteen two predefined `module.xml` files:
 - [`module_all.xml`](src/main/resources/module_all.xml) specifies the library both for web and server wiede usage and
 - [`module_web.xml`](src/main/resources/module_web.xml) only specifies the library for web usage.
 
-Please send me a pull request if you think others might benefit too so.
+Please send me a pull request if you think others might benefit from your profile too.
 
 ## FirstSpirit and Java compatibility
 
