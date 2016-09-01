@@ -1,6 +1,6 @@
 # FSM Library Creator [![Build Status](https://travis-ci.org/zaplatynski/fsm-library-creator.svg?branch=master)](https://travis-ci.org/zaplatynski/fsm-library-creator)
 
-The FistSpirit Module Library Creator is a small but useful application of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers or web liberies like JSTL to the FirstSpirit CMS. See the [FirstSpirit Module Developer Manual (German only)](http://www.e-spirit.com/odfs52/dokumentation/fuer-entwickler/MDEV_DE_FirstSpirit_ModuleDeveloper.pdf), section 3.15 and 3.16 for detailed information.
+The FistSpirit Module Library Creator is a small but useful application of the [FSM Maven Packagetype](https://github.com/zaplatynski/fsm-packagetype). It can be used to provide Library-FSMs such as JDBC drivers or web libaries like JSTL to the FirstSpirit CMS. See the [FirstSpirit Module Developer Manual (German only)](http://www.e-spirit.com/odfs52/dokumentation/fuer-entwickler/MDEV_DE_FirstSpirit_ModuleDeveloper.pdf), section 3.15 and 3.16 for detailed information.
 
 There are predefined working [Maven profiles](pom.xml) for
 - PostgreSQL JDBC driver,
@@ -58,4 +58,3 @@ The version string must match the versions available in Maven central or the use
 
 By using it you agree to the license stated in the file [LICENSE](LICENSE). The JDBC drivers are respective property of the DBMS vendors. FirstSpirit is a trade mark by the [e-Spirit AG](http://www.e-spirit.com/).
 Use this project and provided binaries at your own risk.
-
