@@ -9,6 +9,6 @@ env:
     - LIB=sqlite
     - LIB=derbydb
     - LIB=jstl
-script: mvn clean install -P $LIB
+script: mvn -U clean install -P $LIB
 install:
     -
