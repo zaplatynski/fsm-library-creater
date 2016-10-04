@@ -1,0 +1,33 @@
+<module>
+    <name>${lib-artifactId}</name>
+    <displayname>${lib-displayName}</displayname>
+    <version>${lib-version}</version>
+    <description>${lib-description}</description>
+    <vendor>${lib-vendor}</vendor>
+    <components>
+        <web-app scopes="global,project">
+            <name>${lib-artifactId}-web-library</name>
+            <displayname>${lib-displayName} Library</displayname>
+            <web-xml>web.xml</web-xml>
+            <web-resources>
+                #addResources($project "" "lib")
+            </web-resources>
+        </web-app>
+        #if( $lib-module == "all")
+        <library>
+            <name>${lib-artifactId}-library</name>
+            <displayname>${lib-displayName}</displayname>
+            <version>${lib-version}</version>
+            <description>${lib-description}</description>
+            <resources>
+                #addResources($project "" "lib")
+            </resources>
+        </library>
+        #end
+    </components>
+    #if( $lib-module == "all")
+    <resources>
+        #addResources($project "server" "lib")
+    </resources>
+    #end
+</module>

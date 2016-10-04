@@ -43,12 +43,12 @@
 
     <build>
         <defaultGoal>package</defaultGoal>
-        <finalName>${lib.artifactId}-${lib.version}</finalName>
+        <finalName>${lib-artifactId}-${lib-version}</finalName>
         <plugins>
             <plugin>
                 <groupId>com.github.zaplatynski</groupId>
                 <artifactId>fsm-packagetype</artifactId>
-                <version>1.0</version>
+                <version>2.1</version>
                 <extensions>true</extensions>
             </plugin>
             <plugin>
@@ -58,7 +58,7 @@
                     <attach>false</attach>
                     <appendAssemblyId>false</appendAssemblyId>
                     <descriptors>
-                        <descriptor>src/assembly/fsm.xml</descriptor>
+                        <descriptor>src/main/assembly/fsm.xml</descriptor>
                     </descriptors>
                 </configuration>
             </plugin>
@@ -67,9 +67,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>${lib.groupId}</groupId>
-            <artifactId>${lib.artifactId}</artifactId>
-            <version>${lib.version}</version>
+            <groupId>${lib-groupId}</groupId>
+            <artifactId>${lib-artifactId}</artifactId>
+            <version>${lib-version}</version>
         </dependency>
     </dependencies>
 
@@ -78,77 +78,77 @@
         <id>currentVersion</id>
         <activation>
         <property>
-            <name>!lib.version</name>
+            <name>!lib-version</name>
         </property>
         </activation>
             <properties>
-                <lib.version>${lib.use.version}</lib.version>
+                <lib-version>${lib-use.version}</lib-version>
             </properties>
         </profile>
         <profile>
             <id>postgres</id>
             <activation>
                 <property>
-                    <name>!lib.groupId</name>
+                    <name>!lib-groupId</name>
                 </property>
             </activation>
             <properties>
-                <lib.groupId>org.postgresql</lib.groupId>
-                <lib.artifactId>postgresql</lib.artifactId>
-                <lib.use.version>9.4.1209</lib.use.version>
-                <lib.displayName>PostgreSQL JDBC Driver</lib.displayName>
-                <lib.description>PostgreSQL JDBC Driver JDBC 4.1</lib.description>
-                <lib.vendor>PostgreSQL</lib.vendor>
-                <lib.module>module_all.xml</lib.module>
+                <lib-groupId>org.postgresql</lib-groupId>
+                <lib-artifactId>postgresql</lib-artifactId>
+                <lib-use.version>9.4.1209</lib-use.version>
+                <lib-displayName>PostgreSQL JDBC Driver</lib-displayName>
+                <lib-description>PostgreSQL JDBC Driver JDBC 4.1</lib-description>
+                <lib-vendor>PostgreSQL</lib-vendor>
+                <lib-module>all</lib-module>
             </properties>
         </profile>
         <profile>
             <id>mysql</id>
             <properties>
-                <lib.groupId>mysql</lib.groupId>
-                <lib.artifactId>mysql-connector-java</lib.artifactId>
-                <lib.use.version>6.0.3</lib.use.version>
-                <lib.displayName>MySQL JDBC Driver</lib.displayName>
-                <lib.description>MySQL JDBC Type 4 driver</lib.description>
-                <lib.vendor>MySQL</lib.vendor>
-                <lib.module>module_all.xml</lib.module>
+                <lib-groupId>mysql</lib-groupId>
+                <lib-artifactId>mysql-connector-java</lib-artifactId>
+                <lib-use.version>6.0.3</lib-use.version>
+                <lib-displayName>MySQL JDBC Driver</lib-displayName>
+                <lib-description>MySQL JDBC Type 4 driver</lib-description>
+                <lib-vendor>MySQL</lib-vendor>
+                <lib-module>all</lib-module>
             </properties>
         </profile>
         <profile>
             <id>hsqldb</id>
             <properties>
-                <lib.groupId>org.hsqldb</lib.groupId>
-                <lib.artifactId>hsqldb</lib.artifactId>
-                <lib.use.version>2.3.4</lib.use.version>
-                <lib.displayName>HyperSQL Database JDBC Driver</lib.displayName>
-                <lib.description>HSQLDB - Lightweight 100% Java SQL Database Engine
-                </lib.description>
-                <lib.vendor>The HSQL Development Group</lib.vendor>
-                <lib.module>module_all.xml</lib.module>
+                <lib-groupId>org.hsqldb</lib-groupId>
+                <lib-artifactId>hsqldb</lib-artifactId>
+                <lib-use.version>2.3.4</lib-use.version>
+                <lib-displayName>HyperSQL Database JDBC Driver</lib-displayName>
+                <lib-description>HSQLDB - Lightweight 100% Java SQL Database Engine
+                </lib-description>
+                <lib-vendor>The HSQL Development Group</lib-vendor>
+                <lib-module>all</lib-module>
             </properties>
         </profile>
         <profile>
             <id>sqlite</id>
             <properties>
-                <lib.groupId>org.xerial</lib.groupId>
-                <lib.artifactId>sqlite-jdbc</lib.artifactId>
-                <lib.version>3.8.11.2</lib.version>
-                <lib.displayName>SQLite JDBC Driver</lib.displayName>
-                <lib.description>SQLite JDBC library</lib.description>
-                <lib.vendor>Xerial Project</lib.vendor>
-                <lib.module>module_all.xml</lib.module>
+                <lib-groupId>org.xerial</lib-groupId>
+                <lib-artifactId>sqlite-jdbc</lib-artifactId>
+                <lib-version>3.8.11.2</lib-version>
+                <lib-displayName>SQLite JDBC Driver</lib-displayName>
+                <lib-description>SQLite JDBC library</lib-description>
+                <lib-vendor>Xerial Project</lib-vendor>
+                <lib-module>all</lib-module>
             </properties>
         </profile>
         <profile>
             <id>derbydb</id>
             <properties>
-                <lib.groupId>org.apache.derby</lib.groupId>
-                <lib.artifactId>derby</lib.artifactId>
-                <lib.use.version>10.12.1.1</lib.use.version>
-                <lib.displayName>Derby JDBC Driver</lib.displayName>
-                <lib.description>Apache Derby Database Engine and Embedded JDBC Driver</lib.description>
-                <lib.vendor>Apache Software Foundation</lib.vendor>
-                <lib.module>module_all.xml</lib.module>
+                <lib-groupId>org.apache.derby</lib-groupId>
+                <lib-artifactId>derby</lib-artifactId>
+                <lib-use.version>10.12.1.1</lib-use.version>
+                <lib-displayName>Derby JDBC Driver</lib-displayName>
+                <lib-description>Apache Derby Database Engine and Embedded JDBC Driver</lib-description>
+                <lib-vendor>Apache Software Foundation</lib-vendor>
+                <lib-module>all</lib-module>
             </properties>
         </profile>
        <profile>
@@ -156,13 +156,13 @@
             <!-- https://blogs.oracle.com/dev2dev/entry/how_to_get_oracle_jdbc -->
             <id>oracle</id>
             <properties>
-                <lib.groupId>com.oracle.jdbc</lib.groupId>
-                <lib.artifactId>ojdbc7</lib.artifactId>
-                <lib.use.version>12.1.0.2</lib.use.version>
-                <lib.displayName>OracleDB JDBC Driver</lib.displayName>
-                <lib.description>OracleDB JDBC Type 4 driver</lib.description>
-                <lib.vendor>Oracle</lib.vendor>
-                <lib.module>module_all.xml</lib.module>
+                <lib-groupId>com.oracle.jdbc</lib-groupId>
+                <lib-artifactId>ojdbc7</lib-artifactId>
+                <lib-use.version>12.1.0.2</lib-use.version>
+                <lib-displayName>OracleDB JDBC Driver</lib-displayName>
+                <lib-description>OracleDB JDBC Type 4 driver</lib-description>
+                <lib-vendor>Oracle</lib-vendor>
+                <lib-module>all</lib-module>
             </properties>
             <repositories>
                 <repository>
@@ -180,13 +180,13 @@
         <profile>
             <id>jstl</id>
             <properties>
-                <lib.groupId>jstl</lib.groupId>
-                <lib.artifactId>jstl</lib.artifactId>
-                <lib.use.version>1.2</lib.use.version>
-                <lib.displayName>JSTL</lib.displayName>
-                <lib.description>JSP Standard Tag Library</lib.description>
-                <lib.vendor>Apache Software Foundation</lib.vendor>
-                <lib.module>module_web.xml</lib.module>
+                <lib-groupId>jstl</lib-groupId>
+                <lib-artifactId>jstl</lib-artifactId>
+                <lib-use.version>1.2</lib-use.version>
+                <lib-displayName>JSTL</lib-displayName>
+                <lib-description>JSP Standard Tag Library</lib-description>
+                <lib-vendor>Apache Software Foundation</lib-vendor>
+                <lib-module>web</lib-module>
             </properties>
         </profile>
     </profiles>

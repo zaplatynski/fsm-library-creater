@@ -8,10 +8,10 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <files>
         <file>
-            <source>src/main/resources/${lib.module}</source>
+            <source>target/module.xml</source>
             <destName>module.xml</destName>
             <outputDirectory>META-INF</outputDirectory>
-            <filtered>true</filtered>
+            <filtered>false</filtered>
         </file>
         <file>
             <source>src/main/resources/web.xml</source>
@@ -22,7 +22,7 @@
         <dependencySet>
             <outputDirectory>/lib</outputDirectory>
             <includes>
-                <include>${lib.groupId}:${lib.artifactId}</include>
+                <include>${lib-groupId}:${lib-artifactId}</include>
             </includes>
             <useTransitiveFiltering>true</useTransitiveFiltering>
         </dependencySet>
