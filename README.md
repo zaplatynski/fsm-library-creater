@@ -17,19 +17,19 @@ But this is not limited to the examples above. Any library which should be publi
 <profile>
     <id>name</id>
     <properties>
-        <lib.groupId>maven.groupId</lib.groupId>
-        <lib.artifactId>maven.artifactId</lib.artifactId>
-        <lib.use.version>maven.version</lib.use.version>
-        <lib.displayName>Short name</lib.displayName>
-        <lib.description>Long name</lib.description>
-        <lib.vendor>vendor name</lib.vendor>
-        <lib.module>MODULE_XML</lib.module>
+        <lib-groupId>maven.groupId</lib-groupId>
+        <lib-artifactId>maven.artifactId</lib-artifactId>
+        <lib-use.version>maven.version</lib-use.version>
+        <lib-displayName>Short name</lib-displayName>
+        <lib-description>Long name</lib-description>
+        <lib-vendor>vendor name</lib-vendor>
+        <lib-module>MODE</lib-module>
     </properties>
 </profile>
 ```
-For `MODULE_XML` you can choose bewteen two predefined `module.xml` files:
-- [`module_all.xml`](src/main/resources/module_all.xml) specifies the library both for web and server wiede usage and
-- [`module_web.xml`](src/main/resources/module_web.xml) only specifies the library for web usage.
+For `MODE` you can choose bewteen two predefined `module.xml` files:
+- [`all`](src/main/fsm/module.vm) specifies the library both for web and server wiede usage and
+- [`web`](src/main/fsm/module.vm) only specifies the library for web usage.
 
 Please send me a pull request if you think others might benefit from your profile too.
 

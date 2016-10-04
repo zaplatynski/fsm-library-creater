@@ -121,8 +121,7 @@
                 <lib-artifactId>hsqldb</lib-artifactId>
                 <lib-use.version>2.3.4</lib-use.version>
                 <lib-displayName>HyperSQL Database JDBC Driver</lib-displayName>
-                <lib-description>HSQLDB - Lightweight 100% Java SQL Database Engine
-                </lib-description>
+                <lib-description>HSQLDB - Lightweight 100% Java SQL Database Engine</lib-description>
                 <lib-vendor>The HSQL Development Group</lib-vendor>
                 <lib-module>all</lib-module>
             </properties>
@@ -132,7 +131,7 @@
             <properties>
                 <lib-groupId>org.xerial</lib-groupId>
                 <lib-artifactId>sqlite-jdbc</lib-artifactId>
-                <lib-version>3.8.11.2</lib-version>
+                <lib-use.version>3.8.11.2</lib-use.version>
                 <lib-displayName>SQLite JDBC Driver</lib-displayName>
                 <lib-description>SQLite JDBC library</lib-description>
                 <lib-vendor>Xerial Project</lib-vendor>
