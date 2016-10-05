@@ -1,0 +1,5 @@
+#if( $lib-module == "all")
+<resources>
+    #addResources($project "server" "lib")
+</resources>
+#end

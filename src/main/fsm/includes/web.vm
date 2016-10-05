@@ -1,0 +1,8 @@
+<web-app scopes="global,project">
+    <name>${lib-artifactId}-web-library</name>
+    <displayname>${lib-displayName} Library</displayname>
+    <web-xml>web.xml</web-xml>
+    <web-resources>
+        #addResources($project "" "lib")
+    </web-resources>
+</web-app>

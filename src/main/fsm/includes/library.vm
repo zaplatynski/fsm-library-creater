@@ -1,0 +1,11 @@
+#if( $lib-module == "all")
+<library>
+    <name>${lib-artifactId}-library</name>
+    <displayname>${lib-displayName}</displayname>
+    <version>${lib-version}</version>
+    <description>${lib-description}</description>
+    <resources>
+        #addResources($project "" "lib")
+    </resources>
+</library>
+#end

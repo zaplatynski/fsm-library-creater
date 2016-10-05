@@ -1,0 +1,5 @@
+<name>${lib-artifactId}</name>
+<displayname>${lib-displayName}</displayname>
+<version>${lib-version}</version>
+<description>${lib-description}</description>
+<vendor>${lib-vendor}</vendor>
