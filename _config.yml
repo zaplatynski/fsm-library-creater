@@ -1,3 +1,5 @@
 title: FSM Library Creator
 description: The FSM Library Creator can be used to provide Library-FSMs to the FirstSpirit CMS.
 theme: jekyll-theme-slate
+gems:
+ - jekyll-sitemap
